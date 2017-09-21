@@ -31,8 +31,8 @@ export class ModaldronePage {
   //  console.log(this.work);
   }
   modifydrone(work){
-
-    let modal = this.modalCtrl.create(Drone_fixPage,this.work);
+    console.log(work);
+    let modal = this.modalCtrl.create(Drone_fixPage,work);
     modal.present();
   
   }

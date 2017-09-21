@@ -24,17 +24,17 @@ import {ModelP} from '../../providers/model/model' ;
       public modalCtrl: ModalController,
       public loadingCtrl: LoadingController) 
     {
-     this.work =this.work ;
+     this.work = this.work ;
     }
     ionViewDidload() {
         console.log(this.work);
     }
-    modifydrone(){
+    // modifydrone(){
   
-      // let modal = this.modalCtrl.create(ModaldronefixPage);
-      // modal.present();
+    //   // let modal = this.modalCtrl.create(ModaldronefixPage);
+    //   // modal.present();
     
-    }
+    // }
     // dismiss() {
     //   this.viewCtrl.dismiss();
     // }
