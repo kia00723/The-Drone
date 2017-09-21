@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title >Drones</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+   <ion-list >
+      <ion-item *ngFor="let p of work">
+        <ion-thumbnail item-start>
+          <img src="img/thumbnail-totoro.png">
+        </ion-thumbnail>
+        <h2 > รหัสโดรน :{{p.drones_detail_id}}</h2>
+        <p> สถานะของโดรน :{{ p.drones_status_id }}</p>
+        <button ion-button clear item-end (click)="openModal({charNum: p})" >View</button>
+      </ion-item>
+    </ion-list>
+    <ion-row>
+      <ion-col>
+          <div><button col-md-12 ion-button color="danger" block (click)="adddrone()">เพิ่ม Drone</button></div>
+      </ion-col>
+    </ion-row> 
+
+
+ </ion-content>

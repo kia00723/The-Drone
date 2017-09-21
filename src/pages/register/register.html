@@ -1,0 +1,66 @@
+
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title >สมัครสมาชิก</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <br>
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" [(ngModel)]="username" ></ion-input> 
+    </ion-item>
+    
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input> 
+    </ion-item>
+    <ion-item>
+        <ion-label floating >Re-Password</ion-label>
+        <ion-label floating color="danger" id="hidden" >รหัสผ่านไม่ตรงกรุณาตรวจสอบรหัสผ่านใหม่</ion-label>
+        <ion-input type="password" [(ngModel)]="re_password" (change)="repass(hidden)"></ion-input> 
+    </ion-item>
+
+    <ion-item>
+       <ion-label floating>Email</ion-label>
+       <ion-label floating color="danger" id="hidden1" >กรุณาใส่ Email ให้ถูกต้อง</ion-label>
+      <ion-input id="ck_email" type="email" [(ngModel)]="email" (change)="va_email(hidden)"></ion-input>
+     
+    </ion-item>
+    <br>
+
+
+        
+   <ion-item>
+    <ion-label floating>Status</ion-label>
+    <ion-select [(ngModel)]="usertype_id">
+      <ion-option [value]="u.id" *ngFor="let u of usertype">
+        {{ u.type }}
+      </ion-option>
+    </ion-select>
+  </ion-item>
+
+
+  
+    <ion-item></ion-item>
+    <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div><button col-md-12 ion-button color="danger" block (click)="cancel()">ยกเลิก</button></div>
+          </ion-col>
+          <ion-col>
+            <div> <button col-md-12 ion-button color="secondary" block (click)="save()" [disabled]="!username || !password || !re_password || !email || !usertype">ตกลง</button></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      
+  </ion-list>
+
+
+</ion-content>

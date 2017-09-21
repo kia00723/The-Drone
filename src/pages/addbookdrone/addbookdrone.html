@@ -1,0 +1,69 @@
+<!--
+  Generated template for the AddbookdronePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+
+  <ion-navbar color="secondary">
+    <ion-title >จอง Drone</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    
+  <ion-item>
+    <ion-label>ID ผู้เช่า :</ion-label>
+    <ion-input  type="text" [(ngModel)]="user_id_rentar" [disabled]="!close" ></ion-input>
+  </ion-item>
+
+  <ion-item >
+    <ion-label>ID Drone :</ion-label>
+    <ion-input type="text" [(ngModel)]="drone_id" [disabled]="!close" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label>ที่อยู่ผู้ :</ion-label>
+      <ion-input type="text" [(ngModel)]="address" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label>ขนาดพื้นที่ : </ion-label>
+      <ion-input type="text" [(ngModel)]="area_size"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>ชื่อพืช : </ion-label>
+        <ion-input type="text" [(ngModel)]="name_plant"></ion-input>
+    </ion-item>
+
+      <ion-item>
+          <ion-label>ขนาดพืช : </ion-label>
+          <ion-input type="text" [(ngModel)]="size_plants"></ion-input>
+      </ion-item>
+
+        <ion-item>
+            <ion-label>ราคาเช่าDrone : </ion-label>
+            <ion-input type="text" [(ngModel)]="price" [disabled]="!close" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>วันเช่า</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="month"></ion-datetime>
+        </ion-item>
+
+        <ion-item></ion-item>
+        <ion-grid>
+            <ion-row>
+              <ion-col>
+                <div> <button col-md-12 ion-button color="secondary" block (click)="saveAddBook()" >บันทึกข้อมูล</button></div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+    
+</ion-list>
+</ion-content>

@@ -1,0 +1,88 @@
+
+<ion-header>
+  
+    <ion-navbar color="secondary">
+      <ion-title>แก้ไขเพิ่มเติม</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+  <ion-list>
+      <ion-item>
+        <ion-label stacked>ชื่อ</ion-label>
+        <ion-input type="text" [(ngModel)]="firstname" ></ion-input> 
+      </ion-item>
+      
+      <ion-item>
+        <ion-label stacked>นามสกุล</ion-label>
+        <ion-input type="text" [(ngModel)]="lastname"></ion-input> 
+      </ion-item>
+  
+      <ion-item>
+          <ion-label stacked >เบอร์โทรศัพท์</ion-label>
+          <ion-input type="number" id="phone1"[(ngModel)]="phone"   ></ion-input> 
+      </ion-item>
+  
+      <ion-item>
+         <ion-label stacked>ที่อยู่</ion-label>
+        <ion-input  type="text" [(ngModel)]="address" ></ion-input>
+      </ion-item>
+  
+      <ion-item>
+          <ion-label stacked>เมือง</ion-label>
+         <ion-input  type="text" [(ngModel)]="city" ></ion-input>
+       </ion-item>
+      
+       <ion-item>
+          <ion-label stacked>จังหวัด</ion-label>
+          <ion-select [(ngModel)]="province_id">
+            <ion-option [value]="p.id" *ngFor="let p of province">
+              {{ p.province }}
+            </ion-option>
+          </ion-select>
+        </ion-item>
+  
+      
+       <ion-item>
+          <ion-label stacked>ประเทศ</ion-label>
+          <ion-select [(ngModel)]="nationality_id">
+            <ion-option [value]="n.id" *ngFor="let n of nationality">
+              {{ n.nationality }}
+            </ion-option>
+          </ion-select>
+        </ion-item>
+  
+       
+  
+       <ion-item>
+          <ion-label stacked>รหัสไปรษณีย์</ion-label>
+         <ion-input  type="text" [(ngModel)]="postcode"></ion-input>
+       </ion-item>
+  
+       <ion-item>
+          <ion-label stacked>เลขบัตรประชาชน</ion-label>
+         <ion-input  type="text" [(ngModel)]="passport_number"></ion-input>
+       </ion-item>
+  
+  <!-- ========================================================================= -->
+
+  
+  
+      <ion-item></ion-item>
+      <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div><button col-md-12 ion-button color="danger" block (click)="cancel()">ยกเลิก</button></div>
+            </ion-col>
+            <ion-col>
+              <div> <button col-md-12 ion-button color="secondary" block (click)="savepro()">บันทึกข้อมูล</button></div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+  
+  </ion-list>
+    
+  </ion-content>
+  

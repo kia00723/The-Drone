@@ -1,0 +1,44 @@
+
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title >ค้นหา</ion-title>
+    <ion-buttons start>
+        <button ion-button (click)="dismiss()">
+          <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+
+<ion-item>
+    <ion-label>จังหวัด</ion-label>
+    <ion-select [(ngModel)]="province_id" interface="">
+      <ion-option [value]="p.id" *ngFor="let p of province">{{ p.province }}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+      <button  ion-button color="secondary" block (click)="postsearch()"><ion-icon name="search"></ion-icon>ค้นหา</button>
+  </ion-item>
+
+  
+    <ion-list >
+        <ion-item *ngFor="let u of username_thedrone" >
+          <ion-thumbnail item-start>
+            <img src="img/thumbnail-totoro.png">
+          </ion-thumbnail>
+         
+          <h2 >  ชื่อ Drone :{{ u.firstname }}</h2>
+          <p>ที่อยู่ :{{u.address}} </p>
+         
+          <button ion-button clear item-end (click)="selectuser(u)">เลือก</button>
+        </ion-item>
+      </ion-list>
+  
+</ion-content>

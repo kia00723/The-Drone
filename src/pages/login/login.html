@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="secondary" >
+    <ion-title >
+      The Drone
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  
+    <img class="img-ma " src="../../assets/img/camera.png">
+    <ion-list ingin-ma >
+        <div showLogin>
+      <ion-list>
+        
+          <ion-item>
+            <ion-label floating>Username</ion-label>
+            <ion-input type="text" [(ngModel)]="username"></ion-input> 
+          </ion-item>
+          
+          <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password" [(ngModel)]="password" ></ion-input> 
+          </ion-item>
+      
+      </ion-list>
+    </div>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div><button col-md-12 ion-button color="danger" block (click)="doRegi()">Register</button></div>
+          </ion-col>
+          <ion-col>
+            <div> <button col-md-12 ion-button color="secondary" block (click)="doLogin()" >Login</button></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+</ion-content>

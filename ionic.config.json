@@ -1,0 +1,8 @@
+{
+  "name": "TheDrone",
+  "app_id": "588af940",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

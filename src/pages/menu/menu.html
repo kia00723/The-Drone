@@ -1,0 +1,14 @@
+<ion-header>
+    
+ <!--      <ion-navbar color="secondary">
+        <ion-title>หน้าหลัก</ion-title>
+        <button ion-button color="danger"  class="logout" (click)="logout()" outline> <ion-icon name='unlock' is-active="false"></ion-icon></button>
+      </ion-navbar>
+     -->
+    </ion-header>
+
+<ion-tabs color="secondary">
+    <ion-tab tabIcon="home" tabTitle="หน้าหลัก" [root]="tabMain"></ion-tab>
+    <ion-tab tabIcon="notifications" tabTitle="ติดต่อ" [root]="tabMessage"></ion-tab>
+    <ion-tab tabIcon="contact" tabTitle="Profile" [root]="tabProfile"></ion-tab> 
+  </ion-tabs>`
